@@ -1,5 +1,5 @@
 body {
-    background-color: D3C8B5;
+    background-color: #D3C8B5;
 }
 
 #loge{
@@ -109,3 +109,4 @@ position: relattive;
     display: flex;
     gap: 16px;
 }
+
