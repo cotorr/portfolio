@@ -1,0 +1,95 @@
+#loge{
+    float:left;
+    width:250px;
+    height:100px;
+    line-height:100px;
+    padding-left:20px;
+}
+#logo h1{
+    font-family:'Merienda' , cursive;
+    font-weight: 700;
+    font-size:40px;
+    color:#222;
+    text-shadow:0 - 1px 0 #222;
+}
+#topMenu{
+    height: 60px;
+}
+#topMenu >li{
+    float:left;
+position: relattive;
+}
+#topMenu> li>a {
+    display:block;
+    font-size: 1.1em;
+    color:#222;
+    font-weight:600;
+    padding:20px 60px;
+}
+#main>section{
+    margin-top: 60px;
+}
+main h2{
+    font-size:2em;
+    line-height: 2.5;
+    color: #322F2D;
+}
+
+main h3{
+    font-size:1.0em;
+    line-height: 2.5;
+    color: #322F2D;
+}
+main h4{
+    font-size :1em;
+    line-height: 2.5;
+    color: #322F2D;
+}
+
+main h5{
+    font-size :2em;
+    line-height: 2.5;
+    color: #322F2D;
+}
+main h6{
+    font-size :2em;
+    line-height: 2.5;
+    color: #322F2D;
+}
+
+main h7{
+    font-size :2em;
+    line-height: 2.5;
+    color: #322F2D;
+    float : left;
+}
+
+main h8{
+    font-size :2em;
+    line-height: 2.5;
+    color: #322F2D;
+}
+main p{
+    font-size: 1em;
+    line-height: 2.5;
+    color: #322F2D;
+}
+main div{
+    margin-top: 20px;
+}
+
+#Menu{
+    height: 60px;
+}
+#Menu >li{
+    float:left;
+position: relattive;
+}
+#Menu> li>a {
+    display:block;
+    font-size: 1.1em;
+    color:#322F2D;
+    font-weight:600;
+    padding:20px 60px;
+}
+
