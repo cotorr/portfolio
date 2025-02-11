@@ -1,102 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+body {
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+  }
+
 body {
     background-color: #D3C8B5;
 }
 
-#loge{
-    float:left;
-    width:250px;
-    height:100px;
-    line-height:100px;
-    padding-left:20px;
-}
-#logo h1{
-    font-family:'Merienda' , cursive;
-    font-weight: 700;
-    font-size:40px;
-    color:#222;
-    text-shadow:0 - 1px 0 #222;
-}
-#topMenu{
-    height: 60px;
-}
-#topMenu >li{
-    float:left;
-position: relattive;
-}
-#topMenu> li>a {
-    display:block;
-    font-size: 1.1em;
-    color:#222;
-    font-weight:600;
-    padding:20px 60px;
-}
-#main>section{
-    margin-top: 60px;
-}
-main h2{
-    font-size:2em;
-    line-height: 2.5;
-    color: #322F2D;
+.mian-back {
+    background-image: url(../img/main-background-img.png);
+    height: 100vh;
 }
 
-main h3{
-    font-size:1.0em;
-    line-height: 2.5;
-    color: #322F2D;
+.header-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
 }
-main h4{
-    font-size :1em;
-    line-height: 2.5;
-    color: #322F2D;
+.logo h1{
+    color: #fff;
+    font-size: 160px;
 }
-
-main h5{
-    font-size :2em;
-    line-height: 2.5;
-    color: #322F2D;
+.logo h2{
+    color: #fff;
+    font-size: 100px;
 }
-main h6{
-    font-size :2em;
-    line-height: 2.5;
-    color: #322F2D;
-}
-
-main h7{
-    font-size :2em;
-    line-height: 2.5;
-    color: #322F2D;
-    float : left;
-}
-
-main h8{
-    font-size :2em;
-    line-height: 2.5;
-    color: #322F2D;
-}
-main p{
-    font-size: 1em;
-    line-height: 2.5;
-    color: #322F2D;
-}
-main div{
-    margin-top: 20px;
-}
-
-#Menu{
-    height: 60px;
-}
-#Menu >li{
-    float:left;
-position: relattive;
-}
-#Menu> li>a {
-    display:block;
-    font-size: 1.1em;
+h2{
     color:#322F2D;
-    font-weight:600;
-    padding:20px 60px;
+    font-size: 77px;
 }
 
+h3{
+    color:#322F2D;
+    font-size: 40px;
+}
+p{
+    color:#322F2D;
+    font-size: 32px;
+}
+.header-menu-ul {
+    display: flex;
+}
+h4{
+    font-size: 19px;
+}
+.header-menu-ul > li > a {
+    color: #fff;
+    text-decoration: none;
+    padding: 16px;
+}
 
 .search {
     border: none;

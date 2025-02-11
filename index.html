@@ -13,11 +13,11 @@
 <body>
     <section id="main" class="mian-back">
         <header>
-            <nav>
+            <nav class="header-menu">
                 <div class="menu-icon">
-
+                    <img src="./img/header_menu_icon.png" alt="">
                 </div>
-                <ul class="header-menu">
+                <ul class="header-menu-ul">
                     <li>
                         <a href="#">Login</a>
                     </li>
@@ -29,7 +29,10 @@
                     </li>
                 </ul>
             </nav>
-            <h1 class="logo"> Zara Hoem </h1>
+            <div class="logo">
+                <h1> Zara</h1>
+                <h2>HOME</h2>
+            </div>
             <div class="search-box">
                 <input class="search" type="text" placeholder="Search">
             </div>
@@ -39,7 +42,9 @@
 
     <main>
         <section>
-            <h2>About Us</h2>
+            <div class="about">
+                <h2>About Us</h2>
+            </div>
             <article>
                 <div class="about-img-box">
                     <figure>
@@ -62,9 +67,6 @@
             </article>
 
             <article>
-                <figure>
-                    <img src="./img/about_03.png" alt="회사소개이미지3">
-                </figure>
                 <p>
                     With nature-inspired details and elegant designs,
                     <br>
@@ -72,79 +74,138 @@
                     <br>
                     for our customers.
                 </p>
+                <figure>
+                    <img src="./img/about_03.png" alt="회사소개이미지3">
+                </figure>
             </article>
-            <div>
-                <section>
-                    <article>
-                        <h2>Sale ltems</h2>
+        </section>
 
-                        <div style="display: flex;  justify-content:flex-start;">
+        <section>
+            <article class="sale-items-section">
+                <div>
+                    <div class="sale-item-container">
+                        <h2>Sale ltems</h2>
+                        <div class="sale-item-box">
                             <div class="sale-ltems">
                                 <img src="./img/sale ltems_01.png" alt="sale-ltems_01">
-                                <h3>Tableware</h3>
+                                <h4>Tableware</h4>
                                 <p>33,400원</p>
                                 <p>13,00원</p>
                             </div>
                             <div class="sale-ltems">
                                 <img src="./img/sale ltems_02.png" alt="sale-ltems_02">
-                                <h3>Tableware</h3>
+                                <h4>Tableware</h4>
                                 <p>33,400원</p>
                                 <p>13,00원</p>
                             </div>
                             <div class="sale-ltems">
                                 <img src="./img/sale ltems_03.png" alt="sale-ltems_03">
-                                <h3>Tableware</h3>
+                                <h4>Tableware</h4>
                                 <p>33,400원</p>
                                 <p>13,00원</p>
                             </div>
-
                         </div>
-
                         <p>
                             SALE최대 40%할인 / 일부 품목 제외 /12월18일 재고 소진시까지지
                         </p>
-                        <div style="display: flex;  justify-content:flex-end;">
-                            <div class="sale-ltems">
-                                <figure>
-                                    <img src="./img/sale ltems_04.png" alt="sale-ltems_04">
-                                </figure>
-                            </div>
+                    </div>
+                    <figure>
+                        <img src="./img/sale ltems_04.png" alt="sale-ltems_04">
+                    </figure>
+                </div>
+            </article>
 
-                    </article>
+            <article class="the-product-section">
+                <h2>the product</h2>
+                <div>
+                    <div class="Menu">
+                        <figure>
+                            <img src="./img/menu_1.png" alt="Tableware 사진">
+                        </figure>
+                        <li>
+                            <a href="#">Tableware</a>
+                        </li>
+                    </div>
+                    <div class="Menu">
+                        <img src="./img/menu_2.png" alt="Home Decor 사진">
+                        <li>
+                            <a href="#">Home Decor</a>
+                        </li>
+                    </div>
+                    <div class="Menu">
+                        <img src="./img/menu-3.png" alt="Lighting 사진">
+                        <li>
+                            <a href="#">Lighting</a>
+                        </li>
+                        <br>
+                    </div>
+                    <div class="Menu">
+                        <img src="./img/menu_4.png" alt="Furniture 사진">
+                        <li>
+                            <a href="#">Furniture</a>
+                        </li>
+                    </div>
+                    <div class="Menu">
+                        <img src="./img/menu_5.png" alt="Bedding 사진">
+                        <li>
+                            <a href="#">Bedding</a>
+                        </li>
+                    </div>
+                    <div class="Menu">
+                        <img src="./img/menu_6.png" alt="Bathroom 사진">
+                        <li>
+                            <a href="#">Bathroom</a>
+                        </li>
+                    </div>
+                    <div class="Menu">
+                        <img src="./img/menu_7.png" alt="Fragrance & Diffusers사진">
+                        <li>
+                            <a href="#">Fragrance & Dffusers</a>
+                        </li>
+                    </div>
+                </div>
+            </article>
+        </section>
 
-                </section>
-                <section>
-                    <h4> the product</h4>
-                    <article>
-                        <ul id="Menu">
-                            <li><a href="#"> Tableware</a></li>
-                            <li><a href="#"> Home Decor </a></li>
-                            <li><a href="#"> Lighting</a></li>
-                            <li><a href="#"> Furniture</a></li>
-                            <li><a href="#"> Bedding</a></li>
-                            <li><a href="#"> Bathroom </a></li>
-                            <li><a href="#"> Fragrance &111 Diffusers </a></li>
 
-                        </ul>
-                    </article>
-                </section>
+        <section class="">
+            <div class="background_img">
+                <h2> VINCENT VAN DUYSEN </h2>
+
+
+                <p>Zara Home 과의 협업을 통해 제 철학의 본질에 집중하고
+                    <br>
+                    이를 매우 순수한 방식으로 나타낼 수 있습니다.
+                </p>
+
+                <p> 시대를 초월한 디자인에 기반을 둔 컬렉션.
+                    <br>
+                    마땅히 시간이 지나도 변치 않는 품질과 편안함
+                </p>
+                <figure>
+                    <img src="./img/vincent_1.png" alt="vincent사진1">
+                    <img src="./img/vincent_2.png" alt="vincent사진2">
+                </figure>
+                <figure>
+                    <!-- philosophy 이미지 백그라운드로 넣을것 -->
+                </figure>
             </div>
-            <section>
-                <article>
-                    <h7> VINCENT VAN DUYSEN </h7>
-                   
-                    <p>Zara Home 과의 협업을 통해 제 철학의 본질에 집중하고
-                        이를 매우 순수한 방식으로 나타낼 수 있습니다. </p>
-                    
-                    <p> 시대를 초월한 디자인에 기반을 둔 컬렉션. 마땅히 시간이 지나도 변치 않는 품질과 편안함</p>
-                </article>
+            <figure class="man-img">
+                <img src="./img/vincent_man.png" alt="">
+            </figure>
+        </section>
 
-                <article>
-                    <h8> Editorial </h8>
-                    <p>이 모든 기하학적 형상의 조합이 하나의 새로운 형태를,
-                        즉 부분의 합보다 더 큰 합리적인 실루엣을 창조하는 방식입니다.그래서 라인은 매우 깨끗하지만 여전히 편안함을 불러일으키는 심플함이 있습니다</p>
-                </article>
-            </section>
+        <article>
+            <h2> Editorial </h2>
+            <div>
+                <p>이 모든 기하학적 형상의 조합이 하나의 새로운 형태를,
+                    <br>
+                    즉 부분의 합보다 더 큰 합리적인 실루엣을 창조하는 방식입니다.
+                    <br>
+                    그래서 라인은 매우 깨끗하지만 여전히 편안함을 불러일으키는 심플함이 있습니다
+                </p>
+            </div>
+        </article>
         </section>
     </main>
 
