@@ -5,10 +5,10 @@ body {
     font-family: "Playfair Display", serif;
     font-optical-sizing: auto;
     font-style: normal;
-  }
+}
 
 body {
-    background-color: #D3C8B5;
+    background-color: #E2DFD8;
 }
 
 .mian-back {
@@ -22,34 +22,60 @@ body {
     align-items: center;
     padding: 20px;
 }
-.logo h1{
+
+.logo h1 {
     color: #fff;
     font-size: 160px;
-}
-.logo h2{
-    color: #fff;
-    font-size: 100px;
-}
-h2{
-    color:#322F2D;
-    font-size: 77px;
+    padding-left: 20px;
 }
 
-h3{
-    color:#322F2D;
+.logo h2 {
+    color: #fff;
+    font-size: 100px;
+    padding-left: 20px;
+}
+
+
+.sale-ltems h2 {
+    color: #322F2D;
+    font-size: 77px;
+    padding: 55px;
+    padding-top:38px;
+}
+ .sale-item-box{ 
+    display: flex;
+    justify-content: flex-start;
+    padding: 30px;
+    
+    
+}
+.sale-item-container{
+    background-color:#D3C8B5;
+    width: 900px;
+    height: 669px;
+     padding-block: 30px;
+}
+
+.sale-ltems-1{
+    width: 900px;
+    height: 669px;
+}
+h3 {
+    color: #322F2D;
     font-size: 40px;
 }
-p{
-    color:#322F2D;
-    font-size: 32px;
-}
+
+
+
 .header-menu-ul {
     display: flex;
 }
-h4{
+
+h4 {
     font-size: 19px;
 }
-.header-menu-ul > li > a {
+
+.header-menu-ul>li>a {
     color: #fff;
     text-decoration: none;
     padding: 16px;
@@ -61,9 +87,72 @@ h4{
     padding: 24px;
     border-bottom: 2px solid #000;
 }
-
+.about-img-box2 {
+    display: flex;
+    gap: 44px;
+    width: 820px;/* 가로 크기 */
+    height: 391px;/* 세로 크기 */
+    padding:55px;
+}
 .about-img-box {
     display: flex;
-    gap: 16px;
+    gap: 44px;
+    width: 312px;/* 가로 크기 */
+    height: 413px;/* 세로 크기 */
+    object-fit: cover;/* 비율 유지하며 크롭 */
+    padding-left: 55px;
+    
 }
 
+.about-cotaniner {
+    align-items: center;
+    display: flex;
+    justify-content: space-between; /* 양쪽 정렬 */
+    padding-top: 60px; /* 제목 위 여백 */
+}
+.about-box {
+    background-color: #F3F2EE;
+    height: 138vh;
+    text-align: left;
+    padding: 50px 20px;
+    margin: 0 auto;
+}
+
+.about-text {
+    flex: 1;
+    text-align: right;
+    font-size: 32px;
+    line-height: 1.6;
+    color: #322F2D;
+}
+.about{
+    padding-left: 55px;
+    padding-top:38px;
+}
+
+.the-product-section h2{
+    color: #322F2D;
+    font-size: 77px;
+    padding: 55px;
+    padding-top:38px;
+}
+
+.background_img h2{
+    color: #322F2D;
+    font-size: 77px;
+    padding: 55px;
+    padding-top:38px;
+}
+.vincent-box{
+    background-color: #F3F2EE;
+    height: 170vh;
+    text-align: left;
+    padding: 50px 20px;
+    margin: 0 auto;
+}
+.editorial-text h2{
+    color: #322F2D;
+    font-size: 50px;
+    padding: 55px;
+    padding-top:38px;
+}
