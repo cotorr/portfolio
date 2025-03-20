@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
+@font-face {
+    font-family: 'Chosunilbo_myungjo';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 
 body {
     font-family: "Playfair Display", serif;
@@ -8,13 +16,22 @@ body {
     background-color: #E2DFD8;
 }
 
+.font-ko,
+.bottomMenu ul li a,
+.editor-box > p,
+.vincent-text-box > p   {
+    font-family: 'Chosunilbo_myungjo';
+    line-height: 20px;
+}
+
+
 h3 {
     color: #322F2D;
     font-size: 40px;
 }
 
 h4 {
-    font-size: 19px;
+    font-size: 20px;
 }
 
 .side_padding {
@@ -36,6 +53,7 @@ h4 {
 .logo {
     color: #fff;
     padding-left: 20px;
+    margin-bottom: 50px;
 }
 
 .logo h1 {
@@ -71,6 +89,7 @@ h4 {
     gap: 100px;
 }
 
+
 .sale-item-container {
     background-color: #D3C8B5;
     width: 100%;
@@ -83,6 +102,19 @@ h4 {
     padding: 24px;
 }
 
+.sale-ltems > h4 {
+    margin-top: 8px;
+}
+
+.sale-ltems > p {
+    margin-top: 4px;
+}
+
+.sale-ltems > p:last-child {
+    color: #A02727;
+}
+
+
 .header-menu-ul {
     display: flex;
 }
@@ -93,11 +125,28 @@ h4 {
     padding: 16px;
 }
 
+.search-box {
+    padding-left: 20px;
+    position: relative;
+}
+
 .search {
     border: none;
     outline: none;
     padding: 24px;
-    border-bottom: 2px solid #000;
+    border: none;
+    background: none;
+    border-bottom: 2px solid #fff;
+}
+
+.search-text {
+    color: #fff;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    font-size: 24px;
+    transform: translateY(-50%);
 }
 
 .about-img-box2>figure>img,
@@ -212,7 +261,7 @@ h4 {
     padding: 70px 20px;
     width: 1200px;
     margin: 0 auto;
-
+    
 }
 
 .editorial-title h2 {
@@ -225,8 +274,7 @@ h4 {
 }
 
 .edi-1 {
-    width: 900px;
-    padding: 56px 24px;
+    /* padding: 56px 24px; */
     margin: 0 auto;
 }
 
@@ -240,6 +288,12 @@ h4 {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+}
+
+.menu-top a,
+.menu-below a {
+    font-size: 20px;
+    margin-top: 8px;
 }
 
 .menu-below1 {
@@ -256,7 +310,7 @@ h4 {
 .menu-below2 {
     display: flex;
     align-items: flex-end;
-    gap: 64px;
+    gap: 78px;
 }
 
 figure>a {
@@ -270,11 +324,15 @@ figure>a {
     align-items: center;
 }
 
+.vincent-text-box {
+    text-align: center;
+}
+
 .edi-imgbox {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
     gap: 64px;
-    padding-left: 950px;
+    justify-content: center;
 }
 
 .bottomMenu {
@@ -282,4 +340,8 @@ figure>a {
     padding: 70px 20px;
     display: flex;
     justify-content: space-evenly;
+}
+
+.j-box> h4 {
+    margin-top: 8px;
 }
