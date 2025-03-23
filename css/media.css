@@ -31,7 +31,9 @@
         height: 250px;
     }
 
-    .menu-top figure img {}
+    .menu-top figure img {
+
+    }
 }
 
 @media (max-width: 1400px) {
@@ -76,6 +78,7 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
+        justify-content: space-between;
     }
 
     .vincent-left h2 {
@@ -97,6 +100,11 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
+        justify-content: space-between;
+    }
+    .menu-below figure img{
+        width:220px;
+        height: 250px;
     }
 
     .vin2-box figure img {
