@@ -252,7 +252,7 @@ h4 {
 
 .editorial-main {
     padding: 55px;
-
+    box-sizing: border-box;
     position: relative;
 }
 
@@ -275,7 +275,7 @@ h4 {
 
 .edi-1 {
     /* padding: 56px 24px; */
-    margin: 0 auto;
+    margin: 0 auto 60px auto;
 }
 
 .menu-box {
@@ -342,6 +342,10 @@ figure>a {
     justify-content: space-evenly;
 }
 
-.j-box> h4 {
-    margin-top: 8px;
+.sns-list {
+    display: flex;
+}
+
+.footer-box > h4 {
+    margin-bottom: 8px;
 }
