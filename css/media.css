@@ -80,6 +80,7 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
+        padding: 5px;
     }
 
     .menu-below1 {
@@ -165,7 +166,7 @@
     .sale-item-container>figure>img {
         width: 360px;
     }
-
+.
     .sale-item-container {
         flex-wrap: nowrap;
     }
