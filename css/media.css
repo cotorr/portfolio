@@ -327,10 +327,10 @@
 
     .menu-below2 figure img {
         width: 150px;
-        height: 150px;
+        height: 160px;
     }
 }
 
 @media (max-width:400px) {
-   
+  
 }
