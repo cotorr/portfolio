@@ -151,13 +151,13 @@
 @media (max-width: 960px) {
     .about-cotaniner {
         flex-direction: column;
-
+        align-items: center;        
     }
 
-    .about-cotaniner {
+    .reverse {
         flex-direction: column-reverse;
     }
-
+    
     .sale-item-box>div:nth-child(2),
     .sale-item-box>div:nth-child(3) {
         display: none;
@@ -226,6 +226,10 @@
         width: 324px;
     }
 
+    .footer-boxs {
+        display: none;
+    }
+
 
 }
 
@@ -245,6 +249,23 @@
 
     .about-img-box2 {
         width: 475px;
+    }
+
+    .logo h1 {
+        font-size: 120px;
+    }
+
+    .logo h2 {
+        font-size: 72px;
+    }
+
+    .search-text {
+        font-size: 18px;
+    }
+    .font-ko {
+        padding: 0 50px;
+        text-align: center;
+        font-size: 14px;
     }
 }
 
@@ -273,9 +294,46 @@
         width: 180px;
         height: 180px;
     }
+
+    .vincent-left h2 {
+        font-size: 47px;
+    }
+
+    .menu-title h2 {
+        font-size: 47px;
+    }
+
+    .editorial-title h2 {
+        font-size: 47px;
+    }
+
+    .about-text-left h3 {
+        font-size: 36px;
+    }
+
 }
 
 @media (max-width:500px) {
+    .side_padding {
+        padding: 16px;
+    }
+
+    .menu-title h2 {
+        font-size: 35px;
+    }
+
+    .vincent-left h2 {
+        font-size: 40px;
+    }
+
+    .editorial-title h2 {
+        font-size: 40px;
+    }
+
+    .sale-ltems-title h2 {
+        font-size: 47px;
+    }
+
     .about-img-box figure img {
         width: 180px;
         height: 250px;
@@ -290,12 +348,18 @@
         width: 410px;
     }
 
-    .font-ko {
-        font-size: 11px;
-    }
-
     .sale-item-container>figure>img {
         width: 250px;
+    }
+    .logo h1 {
+        font-size: 110px;
+    }
+
+    .logo h2 {
+        font-size: 62px;
+    }
+    .header-menu-ul {
+        font-size: 15px;
     }
 }
 
@@ -329,8 +393,56 @@
         width: 150px;
         height: 150px;
     }
+
+    .vin2-box figure img {
+        width: 150px;
+        height: 200px;
+    }
+
+    .editor-box p {
+        font-size: 15px;
+    }
+    .about-text-left h3 {
+        font-size: 30px;
+    }
 }
 
 @media (max-width:400px) {
-  
+    .menu-top figure img {
+        width: 136px;
+        height: 136px;
+
+    }
+
+    .menu-below1 figure img {
+        width: 136px;
+        height: 136px;
+    }
+
+    .menu-below2 figure img {
+        width: 136px;
+        height: 136px;
+    }
+
+    .sale-ltems-title h2 {
+        font-size: 43px;
+    }
+
+    .vincent-left h2 {
+        font-size: 35px;
+    }
+
+    .editorial-title h2 {
+        font-size: 35px;
+    }
+    .about-text-left h3 {
+        font-size: 28px;
+    }
+    .logo h1 {
+        font-size: 90px;
+    }
+
+    .logo h2 {
+        font-size: 50px;
+    }
 }
