@@ -156,303 +156,305 @@
     }
 
     .about-cotaniner {
+
         .sale-item-box>div:nth-child(2),
         .sale-item-box>div:nth-child(3) {
             display: none;
         }
+    }
 
-        .sale-item-container>figure {
-            display: block;
-        }
+    .sale-item-container>figure {
+        display: block;
+    }
 
-        .sale-item-container>figure>img {
-            width: 360px;
-        }
+    .sale-item-container>figure>img {
+        width: 360px;
+    }
 
-        .sale-item-container {
-            flex-wrap: nowrap;
-        }
+    .sale-item-container {
+        flex-wrap: nowrap;
+    }
 
-        about-img-box .menu-box {
-            gap: 60px;
-        }
+    about-img-box .menu-box {
+        gap: 60px;
+    }
 
-        .menu-top {
-            justify-content: center;
-            gap: 64px;
-        }
+    .menu-top {
+        justify-content: center;
+        gap: 64px;
+    }
 
-        .menu-top figure img {
-            width: 220px;
-            height: 250px;
-        }
+    .menu-top figure img {
+        width: 220px;
+        height: 250px;
+    }
 
-        .menu-top>div:nth-child(3) {
-            display: none;
-        }
+    .menu-top>div:nth-child(3) {
+        display: none;
+    }
 
-        .about-img-box {
-            padding: 0%;
-        }
+    .about-img-box {
+        padding: 0%;
     }
 }
 
-    @media (max-width:800px) {
-        .sale-item-container {
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            padding-bottom: 55px;
-        }
 
-        .about-img-box2 figure img {
-            width: 600px;
-            height: 320px;
-        }
-
-        .about-img-box2 {
-            width: 570px;
-        }
+@media (max-width:800px) {
+    .sale-item-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding-bottom: 55px;
     }
 
-    @media (max-width:760px) {
-        .edi-imgbox {
-            flex-wrap: wrap;
-            gap: 36px;
-        }
-
-        .sale-item-container>figure>img {
-            width: 324px;
-        }
-
-        .footer-boxs {
-            display: none;
-        }
-
-
+    .about-img-box2 figure img {
+        width: 600px;
+        height: 320px;
     }
 
-    @media (max-width:650px) {
+    .about-img-box2 {
+        width: 570px;
+    }
+    
+}
 
-        .about-img-box figure img {
-            width: 210px;
-            height: 325px;
-        }
-
-
-        .about-img-box2 figure img {
-            width: 480px;
-            height: 300px;
-
-        }
-
-        .about-img-box2 {
-            width: 475px;
-        }
-
-        .logo h1 {
-            font-size: 120px;
-        }
-
-        .logo h2 {
-            font-size: 72px;
-        }
-
-        .search-text {
-            font-size: 18px;
-        }
-
-        .font-ko {
-            padding: 0 50px;
-            text-align: center;
-            font-size: 14px;
-        }
+@media (max-width:760px) {
+    .edi-imgbox {
+        flex-wrap: wrap;
+        gap: 36px;
     }
 
-    @media (max-width:550px) {
-        .vin2-box figure img {
-            width: 180px;
-            height: 260px;
-        }
+    .sale-item-container>figure>img {
+        width: 324px;
+    }
 
-        .vin-main-img>figure>img {
-            width: 300px;
-            height: 350px;
-        }
+    .footer-boxs {
+        display: none;
+    }
 
-        .menu-top figure img {
-            width: 180px;
-            height: 180px;
-        }
+}
 
-        .menu-below1 figure img {
-            width: 180px;
-            height: 180px;
-        }
+@media (max-width:650px) {
 
-        .menu-below2 figure img {
-            width: 180px;
-            height: 180px;
-        }
+    .about-img-box figure img {
+        width: 210px;
+        height: 325px;
+    }
 
-        .vincent-left h2 {
-            font-size: 47px;
-        }
 
-        .menu-title h2 {
-            font-size: 47px;
-        }
-
-        .editorial-title h2 {
-            font-size: 47px;
-        }
-
-        .about-text-left h3 {
-            font-size: 36px;
-        }
+    .about-img-box2 figure img {
+        width: 480px;
+        height: 300px;
 
     }
 
-    @media (max-width:500px) {
-        .side_padding {
-            padding: 16px;
-        }
-
-        .menu-title h2 {
-            font-size: 35px;
-        }
-
-        .vincent-left h2 {
-            font-size: 40px;
-        }
-
-        .editorial-title h2 {
-            font-size: 40px;
-        }
-
-        .sale-ltems-title h2 {
-            font-size: 47px;
-        }
-
-        .about-img-box figure img {
-            width: 180px;
-            height: 250px;
-        }
-
-        .about-img-box2 figure img {
-            width: 420px;
-            height: 240px;
-        }
-
-        .about-img-box2 {
-            width: 410px;
-        }
-
-        .font-ko {
-            font-size: 11px;
-        }
-
-        .sale-item-container>figure>img {
-            width: 250px;
-        }
-
-        .logo h1 {
-            font-size: 110px;
-        }
-
-        .logo h2 {
-            font-size: 62px;
-        }
-
-        .header-menu-ul {
-            font-size: 15px;
-        }
+    .about-img-box2 {
+        width: 475px;
     }
 
-    @media (max-width:450px) {
-        .about-img-box figure img {
-            width: 140px;
-            height: 200px;
-        }
-
-        .about-img-box2 figure img {
-            width: 310px;
-            height: 140px;
-        }
-
-        .about-img-box2 {
-            width: 305px;
-        }
-
-        .menu-top figure img {
-            width: 150px;
-            height: 150px;
-
-        }
-
-        .menu-below1 figure img {
-            width: 150px;
-            height: 150px;
-        }
-
-        .menu-below2 figure img {
-            width: 150px;
-            height: 150px;
-        }
-
-        .vin2-box figure img {
-            width: 150px;
-            height: 200px;
-        }
-
-        .editor-box p {
-            font-size: 15px;
-        }
-
-        .about-text-left h3 {
-            font-size: 30px;
-        }
+    .logo h1 {
+        font-size: 120px;
     }
 
-    @media (max-width:400px) {
-
-        .menu-top figure img {
-            width: 136px;
-            height: 136px;
-
-        }
-
-        .menu-below1 figure img {
-            width: 136px;
-            height: 136px;
-        }
-
-        .menu-below2 figure img {
-            width: 136px;
-            height: 136px;
-        }
-
-        .sale-ltems-title h2 {
-            font-size: 43px;
-        }
-
-        .vincent-left h2 {
-            font-size: 35px;
-        }
-
-        .editorial-title h2 {
-            font-size: 35px;
-        }
-
-        .about-text-left h3 {
-            font-size: 28px;
-        }
-
-        .logo h1 {
-            font-size: 90px;
-        }
-
-        .logo h2 {
-            font-size: 50px;
-        }
+    .logo h2 {
+        font-size: 72px;
     }
+
+    .search-text {
+        font-size: 18px;
+    }
+
+    .font-ko {
+        padding: 0 50px;
+        text-align: center;
+        font-size: 14px;
+    }
+}
+
+@media (max-width:550px) {
+    .vin2-box figure img {
+        width: 180px;
+        height: 260px;
+    }
+
+    .vin-main-img>figure>img {
+        width: 300px;
+        height: 350px;
+    }
+
+    .menu-top figure img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .menu-below1 figure img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .menu-below2 figure img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .vincent-left h2 {
+        font-size: 47px;
+    }
+
+    .menu-title h2 {
+        font-size: 47px;
+    }
+
+    .editorial-title h2 {
+        font-size: 47px;
+    }
+
+    .about-text-left h3 {
+        font-size: 36px;
+    }
+
+}
+
+@media (max-width:500px) {
+    .side_padding {
+        padding: 16px;
+    }
+
+    .menu-title h2 {
+        font-size: 35px;
+    }
+
+    .vincent-left h2 {
+        font-size: 40px;
+    }
+
+    .editorial-title h2 {
+        font-size: 40px;
+    }
+
+    .sale-ltems-title h2 {
+        font-size: 47px;
+    }
+
+    .about-img-box figure img {
+        width: 180px;
+        height: 250px;
+    }
+
+    .about-img-box2 figure img {
+        width: 420px;
+        height: 240px;
+    }
+
+    .about-img-box2 {
+        width: 410px;
+    }
+
+    .font-ko {
+        font-size: 11px;
+    }
+
+    .sale-item-container>figure>img {
+        width: 250px;
+    }
+
+    .logo h1 {
+        font-size: 110px;
+    }
+
+    .logo h2 {
+        font-size: 62px;
+    }
+
+    .header-menu-ul {
+        font-size: 15px;
+    }
+}
+
+@media (max-width:450px) {
+    .about-img-box figure img {
+        width: 140px;
+        height: 200px;
+    }
+
+    .about-img-box2 figure img {
+        width: 310px;
+        height: 140px;
+    }
+
+    .about-img-box2 {
+        width: 305px;
+    }
+
+    .menu-top figure img {
+        width: 150px;
+        height: 150px;
+
+    }
+
+    .menu-below1 figure img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .menu-below2 figure img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .vin2-box figure img {
+        width: 150px;
+        height: 200px;
+    }
+
+    .editor-box p {
+        font-size: 15px;
+    }
+
+    .about-text-left h3 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width:400px) {
+
+    .menu-top figure img {
+        width: 136px;
+        height: 136px;
+
+    }
+
+    .menu-below1 figure img {
+        width: 136px;
+        height: 136px;
+    }
+
+    .menu-below2 figure img {
+        width: 136px;
+        height: 136px;
+    }
+
+    .sale-ltems-title h2 {
+        font-size: 43px;
+    }
+
+    .vincent-left h2 {
+        font-size: 35px;
+    }
+
+    .editorial-title h2 {
+        font-size: 35px;
+    }
+
+    .about-text-left h3 {
+        font-size: 28px;
+    }
+
+    .logo h1 {
+        font-size: 90px;
+    }
+
+    .logo h2 {
+        font-size: 50px;
+    }
+}

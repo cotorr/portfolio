@@ -18,8 +18,8 @@ body {
 
 .font-ko,
 .bottomMenu ul li a,
-.editor-box > p,
-.vincent-text-box > p   {
+.editor-box>p,
+.vincent-text-box>p {
     font-family: 'Chosunilbo_myungjo';
     line-height: 20px;
 }
@@ -102,15 +102,15 @@ h4 {
     padding: 24px;
 }
 
-.sale-ltems > h4 {
+.sale-ltems>h4 {
     margin-top: 8px;
 }
 
-.sale-ltems > p {
+.sale-ltems>p {
     margin-top: 4px;
 }
 
-.sale-ltems > p:last-child {
+.sale-ltems>p:last-child {
     color: #A02727;
 }
 
@@ -194,11 +194,11 @@ h4 {
     gap: 60px;
 }
 
-.about-text-left > h3 {
+.about-text-left>h3 {
     margin-bottom: 32px;
 }
 
-.about-text-left > p {
+.about-text-left>p {
     font-size: 32px;
     line-height: 1.6;
 }
@@ -211,7 +211,7 @@ h4 {
 }
 
 .about-text {
-    
+
     flex: 1;
     text-align: right;
     font-size: 32px;
@@ -223,7 +223,7 @@ h4 {
     flex-direction: column-reverse;
 }
 
-.about-text > p {
+.about-text>p {
     padding-top: 50px;
 }
 
@@ -281,7 +281,7 @@ h4 {
     padding: 70px 20px;
     width: 1200px;
     margin: 0 auto;
-    
+
 }
 
 .editorial-title h2 {
@@ -366,9 +366,114 @@ figure>a {
     display: flex;
 }
 
-.footer-box > h4 {
+.footer-box>h4 {
     margin-bottom: 8px;
 }
-.footer-box4 > h4 {
+
+.footer-box4>h4 {
     margin-bottom: 8px;
 }
+
+
+
+/* ---------- 기존 스타일 (필요에 따라 이미 작성되어 있음) ---------- */
+
+/* ---------- 모달 전용 스타일 ---------- */
+
+/* 모달 전체 오버레이 */
+.modal {
+    display: none; /* 기본 숨김 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    padding-top: 50px;
+  }
+  
+  /* 모달 콘텐츠 컨테이너 */
+  .modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border-radius: 4px;
+    width: 90%;
+    max-width: 800px;
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* 모달 내부 제품 상세 레이아웃 */
+  .product-detail {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .product-image {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .product-image img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .product-info {
+    flex: 2;
+    min-width: 250px;
+  }
+  
+  .product-info h1 {
+    margin-top: 0;
+    font-size: 1.8rem;
+  }
+  
+  .product-info .price {
+    font-size: 1.5rem;
+    color: #e60000;
+    margin: 10px 0;
+  }
+  
+  .product-info .description {
+    font-size: 1rem;
+  }
+  
+  /* 닫기 버튼 스타일 */
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    font-size: 40px;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  /* 모달 내 장바구니 영역 스타일 */
+.cart-section {
+    background-color: #000;    /* 검정색 배경 */
+    color: #fff;               /* 글자색 흰색 */
+    text-align: center;        /* 가운데 정렬 */
+    padding: 6px 20px;        /* 여백 */
+    margin-top: 195px;          /* 위쪽 간격 */
+    font-size: 1rem;           /* 글자 크기 */
+    border-radius: 4px;        /* 모서리 둥글게 (선택 사항) */
+    cursor: pointer;           /* 마우스 포인터로 표시 */
+  }
+  
+  /* 호버 효과 예시 */
+  .cart-section:hover {
+    background-color: #333;    /* 마우스 오버 시 배경색 조금 밝게 */
+  }
+
+
+
+
+  
+  
+  
