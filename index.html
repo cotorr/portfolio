@@ -14,7 +14,7 @@
     <section id="main" class="mian-back">
         <header>
             <nav class="header-menu">
-                <div class="menu-icon">
+                <div class="menu-icon" id="menuToggle">
                     <img src="./img/header_menu_icon.png" alt="배경화면">
                 </div>
                 <ul class="header-menu-ul">
@@ -38,6 +38,22 @@
                 <span class="search-text">search</span>
             </div>
         </header>
+
+        <nav class="side-menu" id="sideMenu">
+            <button class="close-btn" id="closeBtn">&times;</button>
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="#">신상품</a></li>
+                <li><a href="#">Sale item</a></li>
+                <li><a href="#">the-product</a></li>
+                <li><a href="#">VINCENT VAN DUYSEN/<a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Editorial</a></li>
+            </ul>
+
+        </nav>
+        <!-- 오버레이: 사이드 메뉴가 열릴 때 배경에 나타남 -->
+        <div class="overlay" id="overlay"></div>
     </section>
 
     <main>
@@ -128,7 +144,7 @@
                     </figure>
                 </div>
             </article>
-            <article class="the-product-section">
+            <article class="the-product-section hidden-section">
                 <div class="menu-title">
                     <h2>the product</h2>
                 </div>
@@ -181,7 +197,7 @@
             </article>
         </section>
 
-        <section class="vincent-box">
+        <section class="vincent-box hidden-section2">
             <div class="vincent-left">
                 <h2> VINCENT
                     <br>
@@ -213,7 +229,7 @@
         </section>
 
         <section class="edi-1">
-            <div class="editorial-main">
+            <div class="editorial-main ">
                 <div class="editorial-title">
                     <h2> Editorial </h2>
                 </div>
@@ -337,7 +353,8 @@
     </div>
 
     <script src="./js/script.js" defer></script>
-   
+    <script src="scrollFade.js" defer></script>
+
 
 
 </body>

@@ -382,7 +382,8 @@ figure>a {
 
 /* 모달 전체 오버레이 */
 .modal {
-    display: none; /* 기본 숨김 */
+    display: none;
+    /* 기본 숨김 */
     position: fixed;
     top: 0;
     left: 0;
@@ -392,10 +393,10 @@ figure>a {
     background-color: rgba(0, 0, 0, 0.8);
     z-index: 1000;
     padding-top: 50px;
-  }
-  
-  /* 모달 콘텐츠 컨테이너 */
-  .modal-content {
+}
+
+/* 모달 콘텐츠 컨테이너 */
+.modal-content {
     background-color: #fff;
     margin: auto;
     padding: 20px;
@@ -404,46 +405,46 @@ figure>a {
     max-width: 800px;
     display: flex;
     gap: 20px;
-  }
-  
-  /* 모달 내부 제품 상세 레이아웃 */
-  .product-detail {
+}
+
+/* 모달 내부 제품 상세 레이아웃 */
+.product-detail {
     display: flex;
     flex-wrap: wrap;
-  }
-  
-  .product-image {
+}
+
+.product-image {
     flex: 1;
     min-width: 250px;
-  }
-  
-  .product-image img {
+}
+
+.product-image img {
     width: 100%;
     height: auto;
-  }
-  
-  .product-info {
+}
+
+.product-info {
     flex: 2;
     min-width: 250px;
-  }
-  
-  .product-info h1 {
+}
+
+.product-info h1 {
     margin-top: 0;
     font-size: 1.8rem;
-  }
-  
-  .product-info .price {
+}
+
+.product-info .price {
     font-size: 1.5rem;
     color: #e60000;
     margin: 10px 0;
-  }
-  
-  .product-info .description {
+}
+
+.product-info .description {
     font-size: 1rem;
-  }
-  
-  /* 닫기 버튼 스타일 */
-  .close {
+}
+
+/* 닫기 버튼 스타일 */
+.close {
     position: absolute;
     top: 15px;
     right: 35px;
@@ -452,28 +453,147 @@ figure>a {
     border: none;
     color: #fff;
     cursor: pointer;
-  }
+}
 
-  /* 모달 내 장바구니 영역 스타일 */
+/* 모달 내 장바구니 영역 스타일 */
 .cart-section {
-    background-color: #000;    /* 검정색 배경 */
-    color: #fff;               /* 글자색 흰색 */
-    text-align: center;        /* 가운데 정렬 */
-    padding: 6px 20px;        /* 여백 */
-    margin-top: 195px;          /* 위쪽 간격 */
-    font-size: 1rem;           /* 글자 크기 */
-    border-radius: 4px;        /* 모서리 둥글게 (선택 사항) */
-    cursor: pointer;           /* 마우스 포인터로 표시 */
+    background-color: #000;
+    /* 검정색 배경 */
+    color: #fff;
+    /* 글자색 흰색 */
+    text-align: center;
+    /* 가운데 정렬 */
+    padding: 6px 20px;
+    /* 여백 */
+    margin-top: 195px;
+    /* 위쪽 간격 */
+    font-size: 1rem;
+    /* 글자 크기 */
+    border-radius: 4px;
+    /* 모서리 둥글게 (선택 사항) */
+    cursor: pointer;
+    /* 마우스 포인터로 표시 */
+}
+
+/* 호버 효과 예시 */
+.cart-section:hover {
+    background-color: #333;
+    /* 마우스 오버 시 배경색 조금 밝게 */
+}
+
+
+/* 기본 이미지 스타일 */
+.menu-box figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* 마우스 호버 시 확대 효과 */
+.menu-box figure:hover img {
+    transform: scale(1.05);
+}
+
+
+/*사이드 메뉴를 기본적으로 화면 왼쪽 밖에 숨기고 open 클래스를 추가하면 슬라이드하여 나타나게하는거 
+  /* 사이드 메뉴 기본 스타일 */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    /* 화면의 왼쪽에 고정 */
+    width: 250px;
+    height: 100%;
+    background: #fff;
+    border-right: 1px solid #ccc;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    transition: transform 0.3s ease;
+    /* 열고 닫는 애니메이션 */
+    transform: translateX(-100%);
+    /* 처음엔 화면 밖으로 완전히 숨김 */
+    z-index: 1000;
+    padding: 20px;
+}
+
+/* 사이드 메뉴가 열렸을 때 */
+.side-menu.open {
+    transform: translateX(0);
+    /* 제자리로 이동 → 보이게 됨 */
+}
+
+.side-menu h2 {
+    margin-top: 0;
+    font-size: 33px;
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-menu li {
+    margin: 20px 0;
+}
+
+.side-menu li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.side-menu li a:hover {
+    background: #f0f0f0;
+    padding: 5px;
+}
+
+
+/* 오버레이 스타일 */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* 어두운 배경 */
+    display: none;
+    /* 기본적으로 숨김 */
+    z-index: 900;
+    /* 사이드 메뉴보다 낮은 z-index */
+}
+
+.overlay.show {
+    display: block;
+}
+
+
+/* 닫기 버튼 스타일 */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+}
+
+
+
+/*애니메이션 효과를 위한 클래스만 추가합니다.*/
+
+.hidden-section2 {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
   }
   
-  /* 호버 효과 예시 */
-  .cart-section:hover {
-    background-color: #333;    /* 마우스 오버 시 배경색 조금 밝게 */
+  /* 화면에 보일 때: 불투명해지고 원래 위치로 이동 */
+  .show-section {
+    opacity: 1;
+    transform: translateY(0);
   }
-
-
-
-
-  
-  
-  
