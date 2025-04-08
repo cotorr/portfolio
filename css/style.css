@@ -18,8 +18,8 @@ body {
 
 .font-ko,
 .bottomMenu ul li a,
-.editor-box > p,
-.vincent-text-box > p   {
+.editor-box>p,
+.vincent-text-box>p {
     font-family: 'Chosunilbo_myungjo';
     line-height: 20px;
 }
@@ -102,15 +102,15 @@ h4 {
     padding: 24px;
 }
 
-.sale-ltems > h4 {
+.sale-ltems>h4 {
     margin-top: 8px;
 }
 
-.sale-ltems > p {
+.sale-ltems>p {
     margin-top: 4px;
 }
 
-.sale-ltems > p:last-child {
+.sale-ltems>p:last-child {
     color: #A02727;
 }
 
@@ -194,11 +194,11 @@ h4 {
     gap: 60px;
 }
 
-.about-text-left > h3 {
+.about-text-left>h3 {
     margin-bottom: 32px;
 }
 
-.about-text-left > p {
+.about-text-left>p {
     font-size: 32px;
     line-height: 1.6;
 }
@@ -211,7 +211,7 @@ h4 {
 }
 
 .about-text {
-    
+
     flex: 1;
     text-align: right;
     font-size: 32px;
@@ -219,7 +219,7 @@ h4 {
     color: #322F2D;
 }
 
-.about-text > p {
+.about-text>p {
     padding-top: 50px;
 }
 
@@ -273,7 +273,7 @@ h4 {
     padding: 70px 20px;
     width: 1200px;
     margin: 0 auto;
-    
+
 }
 
 .editorial-title h2 {
@@ -358,10 +358,11 @@ figure>a {
     display: flex;
 }
 
-.footer-box > h4 {
+.footer-box>h4 {
     margin-bottom: 8px;
 }
-.footer-box4 > h4 {
+
+.footer-box4>h4 {
     margin-bottom: 8px;
 }
 
@@ -373,15 +374,15 @@ figure>a {
     height: auto;
     display: block;
     transition: transform 0.3s ease;
-  }
-  
-  /* 마우스 호버 시 확대 효과 */
-  .menu-box figure:hover img {
+}
+
+/* 마우스 호버 시 확대 효과 */
+.menu-box figure:hover img {
     transform: scale(1.05);
-  }
+}
 
 
-  /*사이드 메뉴를 기본적으로 화면 왼쪽 밖에 숨기고 open 클래스를 추가하면 슬라이드하여 나타나게하는거 
+/*사이드 메뉴를 기본적으로 화면 왼쪽 밖에 숨기고 open 클래스를 추가하면 슬라이드하여 나타나게하는거 
   /* 사이드 메뉴 기본 스타일 */
 .side-menu {
     position: fixed;
@@ -438,26 +439,74 @@ figure>a {
     position: relative;
 }
 
-/* 모달 */
-.modal {
-    display: none;
-    position: absolute;
-    /* top: 50%; */
-    left: 50%;
-    transform: translate(-50%, -100%);
-    border: 1px solid #000;
-    padding: 24px;
-    text-align: center;
-    border-radius: 15px;
-    background-color: #fff;
-}
 
+/* 전체 화면을 덮는 오버레이 */
 .overlay {
-    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    z-index: 999;
+}
+
+/* 모달 전체 컨테이너 */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 1000;
+    overflow-y: auto;
+}
+
+/* 모달 내용 영역 */
+.modal-content {
+    background-color: #F5F0E5;
+    margin: 5rem auto;
+    width: 80%;
+    max-width: 600px;
+    padding: 2rem;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 모달 상단 닫기 버튼 */
+.modal .close {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* 추가 닫기 버튼 영역 */
+#close_modal {
+    text-align: right;
+    margin-top: 1rem;
+}
+
+
+html.no-scroll,
+body.no-scroll {
+    overflow: hidden;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+#modalImage {
+    padding-top: 20px;
+}
+
+#modalPrice {
+    color:#A02727 ;
 }

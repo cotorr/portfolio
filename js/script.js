@@ -1,75 +1,80 @@
-// document.addEventListener('DOMContentLoaded', function() {
-//   const images = document.querySelectorAll('.menu-box figure img');
+document.addEventListener('DOMContentLoaded', function () {
+    const images = document.querySelectorAll('.menu-box figure img');
 
-//   images.forEach(img => {
-//     img.addEventListener('mouseover', () => {
-//       img.style.transform = 'scale(1.05)';
-//     });
-//     img.addEventListener('mouseout', () => {
-//       img.style.transform = 'scale(1)';
-//     });
-//   });
-// });
+    images.forEach(img => {
+        img.addEventListener('mouseover', () => {
+            img.style.transform = 'scale(1.05)';
+        });
+        img.addEventListener('mouseout', () => {
+            img.style.transform = 'scale(1)';
+        });
+    });
+});
 
+window.onload = function () {
+    // 모달 및 오버레이 요소 선택
+    const modal = document.getElementById('modal');
+    const overlay = document.getElementById('overlay');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalPrice = document.getElementById('modalPrice');
+    const modalDescription = document.getElementById('modalDescription');
+    const modalImage = document.getElementById('modalImage');
 
-//   /* 메뉴아이콘을 클릭하면 사이드 메뉴에 open 클래스를 토글하는거 */
-//   document.addEventListener('DOMContentLoaded', function() {
-//     const menuToggle = document.getElementById('menuToggle');
-//     const sideMenu = document.getElementById('sideMenu');
-//     const closeBtn = document.getElementById('closeBtn');
-  
-//     // 메뉴 아이콘 클릭 시: 사이드 메뉴 토글
-//     menuToggle.addEventListener('click', function(e) {
-//       e.stopPropagation();
-//       sideMenu.classList.toggle('open');
-//     });
-  
-//     // 닫기 버튼 클릭 시: 사이드 메뉴 닫기
-//     closeBtn.addEventListener('click', function() {
-//       sideMenu.classList.remove('open');
-//     });
-    
-//     // (옵션) 문서 클릭 시 메뉴 닫기 (메뉴 외부 클릭)
-//     document.addEventListener('click', function(e) {
-//       // 사이드 메뉴 내부 클릭은 제외
-//       if (!sideMenu.contains(e.target) && sideMenu.classList.contains('open')) {
-//         sideMenu.classList.remove('open');
-//       }
-//     });
-//   });
-  
+    // 모달 닫기 버튼들 선택
+    const closeModalBtn = modal.querySelector('.close');
+    const closeModalBtn2 = document.querySelector('#close_modal button');
 
+    // 여러 세일 아이템 요소들을 클래스('.open_modal')로 선택
+    const saleItems = document.querySelectorAll('.open_modal');
 
-  const openModal = document.getElementById('open_modal');
-        const overlay = document.getElementById('overlay');
-        const modal = document.getElementById('modal');
-        const closeModal = document.getElementById('close_modal');
+    // 스크롤 막기용 함수
+    function disableScroll(e) {
+        e.preventDefault();
+    }
 
-        openModal.addEventListener('click',function(){
+    // 세일 아이템 클릭 시 모달 내용 채우고 표시하는 이벤트 등록
+    saleItems.forEach(item => {
+        item.addEventListener('click', function () {
+            // data 속성에서 필요한 값 읽어오기
+            const title = this.getAttribute('data-title');
+            const price = this.getAttribute('data-price');
+            const description = this.getAttribute('data-description');
+            const image = this.getAttribute('data-image');
+
+            // 모달 콘텐츠 업데이트
+            modalTitle.textContent = title;
+            modalPrice.textContent = price;
+            modalDescription.textContent = description;
+            modalImage.src = image;
+
+            // 모달과 오버레이 표시
             modal.style.display = 'block';
             overlay.style.display = 'block';
-        });
+            modal.setAttribute('aria-hidden', 'false');
 
-        closeModal.addEventListener('click',function(){
-            modal.style.display = 'none';
-            overlay.style.display = 'none';
+            // body 스크롤 정지: no-scroll 클래스 추가 및 wheel/touchmove 이벤트 막기
+            document.body.classList.add('no-scroll');
+            document.addEventListener("wheel", disableScroll, { passive: false });
+            document.addEventListener("touchmove", disableScroll, { passive: false });
         });
-        
-        function closeModalFunction(){
-            modal.style.display = 'none';
-            overlay.style.display = 'none';
-        }
+    });
 
-        closeModal.addEventListener('click', function(){
-            closeModalFunction();
-        });
+    // 모달 닫기 함수
+    const closeModal = function () {
+        modal.style.display = 'none';
+        overlay.style.display = 'none';
+        modal.setAttribute('aria-hidden', 'true');
 
-        document.addEventListener('keydown',function(){
-            if(event.key === 'Escape'){
-                closeModalFunction();
-            }
-        });
+        // body 스크롤 복원: no-scroll 클래스 제거 및 이벤트 리스너 삭제
+        document.body.classList.remove('no-scroll');
+        document.removeEventListener("wheel", disableScroll, { passive: false });
+        document.removeEventListener("touchmove", disableScroll, { passive: false });
+    };
 
-        overlay.addEventListener('click', function(){
-            closeModalFunction();
-        });
+    // 닫기 버튼과 오버레이 클릭 시 모달 닫기 이벤트 등록
+    closeModalBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', closeModal);
+    if (closeModalBtn2) {
+        closeModalBtn2.addEventListener('click', closeModal);
+    }
+};

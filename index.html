@@ -104,37 +104,38 @@
             </article>
         </section>
         <section class="side_padding">
-            <article class="sale-items-section">
+            <article>
                 <div class="sale-item-container">
                     <div class="sale-item-left">
                         <div class="sale-ltems-title">
-                            <h2>Sale ltems</h2>
+                            <h2>Sale Items</h2>
                         </div>
                         <div class="sale-item-box">
-                            <div class="sale-ltems" id="open_modal" data-title="테이블 웨어" data-price="13,000원원"
+                            <!-- id 대신 class "open_modal" 사용 (데이터 속성은 그대로) -->
+                            <div class="sale-ltems open_modal" data-title="테이블 웨어" data-price="13,000원"
                                 data-description="대형코튼 테이블웨어입니다" data-image="./img/sale ltems_01.png">
                                 <img src="./img/sale ltems_01.png" alt="sale-ltems_01">
                                 <h4>Tableware</h4>
                                 <p>33,400원</p>
                                 <p>13,000원</p>
                             </div>
-                            <div class="sale-ltems" id="open_modal" data-title="접이식 타월 행거거" data-price="29,000원원"
-                                data-description="짙은 색상의 소나무 소재 타월 랙" data-image="./img/sale ltems_02.png">
+                            <div class="sale-ltems open_modal" data-title="접이식 타월 행거거" data-price="29,000원"
+                                data-description="짙은 색상의 소나무 소재 타월 랙입니다" data-image="./img/sale ltems_02.png">
                                 <img src="./img/sale ltems_02.png" alt="sale-ltems_02">
-                                <h4>hanger</h4>
+                                <h4>Hanger</h4>
                                 <p>43,700원</p>
                                 <p>29,900원</p>
                             </div>
-                            <div class="sale-ltems" id="open_modal" data-title="린넨 원단의 원목목의자" data-price="42,000원"
-                                data-description="린넨 원단과 애쉬 구조로 된 원목의자자" data-image="./img/sale ltems_03.png">
+                            <div class="sale-ltems open_modal" data-title="린넨 원단의 원목의자" data-price="42,000원"
+                                data-description="린넨 원단과 애쉬 구조로 된 원목의자입니다" data-image="./img/sale ltems_03.png">
                                 <img src="./img/sale ltems_03.png" alt="sale-ltems_03">
-                                <h4>Antique chair</h4>
+                                <h4>Antique Chair</h4>
                                 <p>78,500원</p>
                                 <p>42,000원</p>
                             </div>
                         </div>
                         <p class="font-ko">
-                            SALE최대 40%할인 / 일부 품목 제외 /12월18일 재고 소진시까지지
+                            SALE 최대 40% 할인 / 일부 품목 제외 / 12월 18일 재고 소진시까지
                         </p>
                     </div>
                     <figure>
@@ -143,33 +144,29 @@
                 </div>
             </article>
 
+            <!-- 오버레이 -->
             <div class="overlay" id="overlay"></div>
 
-            <!-- 모달 구조: 문서 맨 아래에 추가 (접근성 고려 ARIA 속성 포함) -->
+            <!-- 모달 -->
+            <!-- 모달 (이미지, 제목, 가격, 설명 포함) -->
             <div id="modal" class="modal" aria-hidden="true" role="dialog">
                 <button class="close" aria-label="닫기">&times;</button>
-                <div class="modal-content product-detail">
-                    <!-- 왼쪽: 제품 이미지 -->
-                    <div class="product-image">
-                        <img src="" alt="" id="modalProductImage">
+                <div class="modal-content">
+                    <!-- 모달 이미지 -->
+                    <img id="modalImage" src="" alt="모달 이미지" style="max-width:100%; display:block; margin: 0 auto;">
+                    <!-- 모달 제목 -->
+                    <h1 id="modalTitle"></h1>
+                     <!-- 모달 설명 -->
+                     <p id="modalDescription"></p>
+                    <!-- 모달 가격 -->
+                    <p id="modalPrice"></p>
+                    <!-- 추가 닫기 버튼 (옵션) -->
+                    <div id="close_modal">
+                        <button>닫기</button>
                     </div>
-                    <!-- 오른쪽: 제품 상세 정보 -->
-                    <div class="product-info">
-                        <h1 id="modalTitle"></h1>
-                        <p class="price" id="modalPrice"></p>
-                        <p class="description" id="modalDescription"></p>
-
-                        <!-- 새로 추가: 장바구니에 추가 영역 -->
-                        <button class="cart-section">
-                            장바구니에 추가 (100,000원 이상 구매시 무료배송)
-                    </div>
-                </div>
-                <div id="close_modal">
-                    <button>
-                        닫기
-                    </button>
                 </div>
             </div>
+
 
 
             <article class="the-product-section hidden-section">
@@ -360,8 +357,8 @@
     </footer>
 
 
-    <script src="scrollFade.js" ></script>
-    <script src="./js/script.js" ></script>
+    <script src="scrollFade.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
