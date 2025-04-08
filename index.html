@@ -14,8 +14,8 @@
     <section id="main" class="mian-back">
         <header>
             <nav class="header-menu">
-                <div class="menu-icon" id="menuToggle">
-                    <img src="./img/header_menu_icon.png" alt="배경화면">
+                <div class="menu-icon">
+                    <img src="./img/header_menu_icon.png" alt="">
                 </div>
                 <ul class="header-menu-ul">
                     <li>
@@ -38,22 +38,6 @@
                 <span class="search-text">search</span>
             </div>
         </header>
-
-        <nav class="side-menu" id="sideMenu">
-            <button class="close-btn" id="closeBtn">&times;</button>
-            <h2>Menu</h2>
-            <ul>
-                <li><a href="#">신상품</a></li>
-                <li><a href="#">Sale item</a></li>
-                <li><a href="#">the-product</a></li>
-                <li><a href="#">VINCENT VAN DUYSEN/<a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Editorial</a></li>
-            </ul>
-
-        </nav>
-        <!-- 오버레이: 사이드 메뉴가 열릴 때 배경에 나타남 -->
-        <div class="overlay" id="overlay"></div>
     </section>
 
     <main>
@@ -62,18 +46,17 @@
                 <h2>About Us</h2>
             </div>
 
-            <article class="about-container">
+            <article class="about-cotaniner">
                 <div class="about-after">
                     <div class="about-img-box">
                         <figure>
-                            <img id="slideImage1" src="./img/about_01.png" alt="회사소개이미지1">
+                            <img src="./img/about_01.png" alt="회사소개이미지1">
                         </figure>
                         <figure>
-                            <img id="slideImage2" src="./img/about_02.png" alt="회사소개이미지2">
+                            <img src="./img/about_02.png" alt="회사소개이미지2">
                         </figure>
                     </div>
                 </div>
-
                 <div class="about-text-left">
                     <h3>
                         “ Zara Home is a home”
@@ -88,7 +71,7 @@
                 </div>
             </article>
 
-            <article class="about-container-reverse">
+            <article class="about-cotaniner reverse">
                 <div class="about-text">
                     <p>
                         With nature-inspired details and elegant designs,
@@ -100,13 +83,13 @@
                 </div>
                 <div class="about-img-box2">
                     <figure>
-                        <img id="slideImage3" src="./img/about_03.png" alt="회사소개이미지3">
+                        <img src="./img/about_03.png" alt="회사소개이미지3">
                     </figure>
                 </div>
             </article>
         </section>
         <section class="side_padding">
-            <article class="sale-items-section ">
+            <article class="sale-items-section">
                 <div class="sale-item-container">
                     <div class="sale-item-left">
                         <div class="sale-ltems-title">
@@ -144,15 +127,8 @@
                     </figure>
                 </div>
             </article>
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-            <article class="the-product-section hidden-section">
-=======
-=======
->>>>>>> Stashed changes
 
             <article class="the-product-section">
->>>>>>> Stashed changes
                 <div class="menu-title">
                     <h2>the product</h2>
                 </div>
@@ -205,7 +181,7 @@
             </article>
         </section>
 
-        <section class="vincent-box hidden-section2">
+        <section class="vincent-box">
             <div class="vincent-left">
                 <h2> VINCENT
                     <br>
@@ -237,7 +213,7 @@
         </section>
 
         <section class="edi-1">
-            <div class="editorial-main ">
+            <div class="editorial-main">
                 <div class="editorial-title">
                     <h2> Editorial </h2>
                 </div>
@@ -339,32 +315,8 @@
 
     </footer>
 
-    <!-- 모달 구조: 문서 맨 아래에 추가 (접근성 고려 ARIA 속성 포함) -->
-    <div id="myModal" class="modal" aria-hidden="true" role="dialog">
-        <button class="close" aria-label="닫기">&times;</button>
-        <div class="modal-content product-detail">
-            <!-- 왼쪽: 제품 이미지 -->
-            <div class="product-image">
-                <img src="" alt="" id="modalProductImage">
-            </div>
-            <!-- 오른쪽: 제품 상세 정보 -->
-            <div class="product-info">
-                <h1 id="modalTitle"></h1>
-                <p class="price" id="modalPrice"></p>
-                <p class="description" id="modalDescription"></p>
 
-                <!-- 새로 추가: 장바구니에 추가 영역 -->
-                <button class="cart-section">
-                    장바구니에 추가 (100,000원 이상 구매시 무료배송)
-            </div>
-        </div>
-    </div>
-
-    <script src="./js/script.js" defer></script>
-    <script src="scrollFade.js" defer></script>
-
-
-
+    
 </body>
 
-</html>
+</html>  

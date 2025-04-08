@@ -151,16 +151,16 @@
 @media (max-width: 960px) {
     .about-cotaniner {
         flex-direction: column;
-
-        align-items: center;
+        align-items: center;        
     }
 
-    .about-cotaniner {
-
-        .sale-item-box>div:nth-child(2),
-        .sale-item-box>div:nth-child(3) {
-            display: none;
-        }
+    .reverse {
+        flex-direction: column-reverse;
+    }
+    
+    .sale-item-box>div:nth-child(2),
+    .sale-item-box>div:nth-child(3) {
+        display: none;
     }
 
     .sale-item-container>figure {
@@ -198,7 +198,6 @@
     }
 }
 
-
 @media (max-width:800px) {
     .sale-item-container {
         display: flex;
@@ -215,10 +214,7 @@
     .about-img-box2 {
         width: 570px;
     }
-
 }
-
-  
 
 @media (max-width:760px) {
     .edi-imgbox {
@@ -233,6 +229,7 @@
     .footer-boxs {
         display: none;
     }
+
 
 }
 
@@ -352,14 +349,9 @@
         width: 410px;
     }
 
-    .font-ko {
-        font-size: 11px;
-    }
-
     .sale-item-container>figure>img {
         width: 250px;
     }
-
     .logo h1 {
         font-size: 110px;
     }
@@ -367,7 +359,6 @@
     .logo h2 {
         font-size: 62px;
     }
-
     .header-menu-ul {
         font-size: 15px;
     }
@@ -412,14 +403,12 @@
     .editor-box p {
         font-size: 15px;
     }
-
     .about-text-left h3 {
         font-size: 30px;
     }
 }
 
 @media (max-width:400px) {
-
     .menu-top figure img {
         width: 136px;
         height: 136px;
@@ -447,11 +436,9 @@
     .editorial-title h2 {
         font-size: 35px;
     }
-
     .about-text-left h3 {
         font-size: 28px;
     }
-
     .logo h1 {
         font-size: 90px;
     }
