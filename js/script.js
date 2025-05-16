@@ -1,3 +1,113 @@
+//사이드 메뉴 열기/닫기 토글 & 화면 바깥 클릭 시 닫기
+window.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.getElementById('menuToggle');
+    const sideMenu = document.getElementById('sideMenu');
+
+    // 메뉴 열기
+    menuToggle.addEventListener('click', function (e) {
+        e.stopPropagation();
+        sideMenu.classList.add('open');
+    });
+
+    // 메뉴 바깥 클릭 시 닫기
+    document.addEventListener('click', function (e) {
+        if (!sideMenu.contains(e.target)) {
+            sideMenu.classList.remove('open');
+        }
+    });
+
+    // 메뉴 내부 클릭은 유지
+    sideMenu.addEventListener('click', function (e) {
+        e.stopPropagation();
+    });
+});
+
+//세일 아이템 클릭 시 모달 열기 + 오버레이 클릭 또는 버튼으로 닫기
+window.onload = function () {
+    const modal = document.getElementById('modal');
+    const overlay = document.getElementById('overlay');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalPrice = document.getElementById('modalPrice');
+    const modalDescription = document.getElementById('modalDescription');
+    const modalImage = document.getElementById('modalImage');
+    const closeModalBtn = modal.querySelector('.close');
+    const closeModalBtn2 = document.querySelector('#close_modal button');
+    const saleItems = document.querySelectorAll('.open_modal');
+
+    function disableScroll(e) {
+        e.preventDefault();
+    }
+
+    saleItems.forEach(item => {
+        item.addEventListener('click', function () {
+            modalTitle.textContent = this.getAttribute('data-title');
+            modalPrice.textContent = this.getAttribute('data-price');
+            modalDescription.textContent = this.getAttribute('data-description');
+            modalImage.src = this.getAttribute('data-image');
+
+            modal.style.display = 'block';
+            overlay.style.display = 'block';
+            modal.setAttribute('aria-hidden', 'false');
+
+            document.body.classList.add('no-scroll');
+            document.addEventListener("wheel", disableScroll, { passive: false });
+            document.addEventListener("touchmove", disableScroll, { passive: false });
+        });
+    });
+
+    const closeModal = function () {
+        modal.style.display = 'none';
+        overlay.style.display = 'none';
+        modal.setAttribute('aria-hidden', 'true');
+
+        document.body.classList.remove('no-scroll');
+        document.removeEventListener("wheel", disableScroll);
+        document.removeEventListener("touchmove", disableScroll);
+    };
+
+    closeModalBtn.addEventListener('click', closeModal);
+    overlay.addEventListener('click', closeModal);
+    if (closeModalBtn2) {
+        closeModalBtn2.addEventListener('click', closeModal);
+    }
+};
+
+//About 섹션의 이미지 자동 슬라이드 + 페이드 전환
+window.addEventListener('DOMContentLoaded', function () {
+    const slide1 = document.getElementById("slideImage1");
+    const slide2 = document.getElementById("slideImage2");
+    const slide3 = document.getElementById("slideImage3");
+
+    const images1 = ["img/about_01.png", "img/about_01_1.png"];
+    const images2 = ["img/about_02.png", "img/about_02_1.png"];
+    const images3 = ["img/about_03.png", "img/about_03_1.png"];
+    let index1 = 0, index2 = 0, index3 = 0;
+
+    function fadeSwitchImage(imgElement, images, indexVarName) {
+        imgElement.classList.add("fade-out");
+
+        setTimeout(() => {
+            if (indexVarName === "index1") {
+                index1 = (index1 + 1) % images.length;
+                imgElement.src = images[index1];
+            } else if (indexVarName === "index2") {
+                index2 = (index2 + 1) % images.length;
+                imgElement.src = images[index2];
+            } else if (indexVarName === "index3") {
+                index3 = (index3 + 1) % images.length;
+                imgElement.src = images[index3];
+            }
+
+            imgElement.classList.remove("fade-out");
+        }, 800);
+    }
+
+    setInterval(() => fadeSwitchImage(slide1, images1, "index1"), 3350);
+    setInterval(() => fadeSwitchImage(slide2, images2, "index2"), 3350);
+    setInterval(() => fadeSwitchImage(slide3, images3, "index3"), 3350);
+});
+
+//the-product 섹션 이미지 마우스 오버 확대
 document.addEventListener('DOMContentLoaded', function () {
     const images = document.querySelectorAll('.menu-box figure img');
 
@@ -10,71 +120,3 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
-
-window.onload = function () {
-    // 모달 및 오버레이 요소 선택
-    const modal = document.getElementById('modal');
-    const overlay = document.getElementById('overlay');
-    const modalTitle = document.getElementById('modalTitle');
-    const modalPrice = document.getElementById('modalPrice');
-    const modalDescription = document.getElementById('modalDescription');
-    const modalImage = document.getElementById('modalImage');
-
-    // 모달 닫기 버튼들 선택
-    const closeModalBtn = modal.querySelector('.close');
-    const closeModalBtn2 = document.querySelector('#close_modal button');
-
-    // 여러 세일 아이템 요소들을 클래스('.open_modal')로 선택
-    const saleItems = document.querySelectorAll('.open_modal');
-
-    // 스크롤 막기용 함수
-    function disableScroll(e) {
-        e.preventDefault();
-    }
-
-    // 세일 아이템 클릭 시 모달 내용 채우고 표시하는 이벤트 등록
-    saleItems.forEach(item => {
-        item.addEventListener('click', function () {
-            // data 속성에서 필요한 값 읽어오기
-            const title = this.getAttribute('data-title');
-            const price = this.getAttribute('data-price');
-            const description = this.getAttribute('data-description');
-            const image = this.getAttribute('data-image');
-
-            // 모달 콘텐츠 업데이트
-            modalTitle.textContent = title;
-            modalPrice.textContent = price;
-            modalDescription.textContent = description;
-            modalImage.src = image;
-
-            // 모달과 오버레이 표시
-            modal.style.display = 'block';
-            overlay.style.display = 'block';
-            modal.setAttribute('aria-hidden', 'false');
-
-            // body 스크롤 정지: no-scroll 클래스 추가 및 wheel/touchmove 이벤트 막기
-            document.body.classList.add('no-scroll');
-            document.addEventListener("wheel", disableScroll, { passive: false });
-            document.addEventListener("touchmove", disableScroll, { passive: false });
-        });
-    });
-
-    // 모달 닫기 함수
-    const closeModal = function () {
-        modal.style.display = 'none';
-        overlay.style.display = 'none';
-        modal.setAttribute('aria-hidden', 'true');
-
-        // body 스크롤 복원: no-scroll 클래스 제거 및 이벤트 리스너 삭제
-        document.body.classList.remove('no-scroll');
-        document.removeEventListener("wheel", disableScroll, { passive: false });
-        document.removeEventListener("touchmove", disableScroll, { passive: false });
-    };
-
-    // 닫기 버튼과 오버레이 클릭 시 모달 닫기 이벤트 등록
-    closeModalBtn.addEventListener('click', closeModal);
-    overlay.addEventListener('click', closeModal);
-    if (closeModalBtn2) {
-        closeModalBtn2.addEventListener('click', closeModal);
-    }
-};

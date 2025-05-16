@@ -508,5 +508,18 @@ body.no-scroll {
 }
 
 #modalPrice {
-    color:#A02727 ;
+    color: #A02727;
+}
+
+/* 자동슬라이드이미지 */
+
+#slideImage1,
+#slideImage2,
+#slideImage3 {
+    transition: opacity 0.8s ease-in-out;
+    opacity: 1;
+}
+
+.fade-out {
+    opacity: 0;
 }
